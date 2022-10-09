@@ -20,8 +20,8 @@ import com.example.jetmovieapp.navigation.MovieScreens
 fun HomeScreen(navController: NavController) {
 	Scaffold(topBar = {
 		TopAppBar(
-			backgroundColor = Color.Magenta,
-			elevation = 5.dp
+			backgroundColor = Color.Transparent,
+			elevation = 0.dp
 		) { Text(text = "Movies") }
 	}) {
 		MainContent(navController = navController)
