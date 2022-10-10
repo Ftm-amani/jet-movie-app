@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.jetmovieapp.model.Movie
 import com.example.jetmovieapp.navigation.MovieNavigation
 import com.example.jetmovieapp.ui.theme.JetMovieAppTheme
 
@@ -40,38 +41,6 @@ fun MyApp(content: @Composable () -> Unit) {
 	JetMovieAppTheme {
 		content()
 	}
-}
-
-@Composable
-fun MovieItemRow(movie: String, onItemClicked: (String) -> Unit = {}) {
-	Card(
-		modifier = Modifier
-			.padding(12.dp)
-			.fillMaxWidth()
-			.height(130.dp)
-			.clickable {
-				onItemClicked(movie)
-			},
-		shape = RoundedCornerShape(corner = CornerSize(16.dp)),
-		elevation = 6.dp
-	) {
-		Row(
-			verticalAlignment = Alignment.CenterVertically,
-			horizontalArrangement = Arrangement.Start
-		) {
-			Surface(
-				Modifier
-					.padding(12.dp)
-					.size(100.dp),
-				shape = RectangleShape,
-				elevation = 4.dp
-			) {
-				Icon(imageVector = Icons.Default.AccountBox, contentDescription = "movie image")
-			}
-			Text(text = movie)
-		}
-	}
-	
 }
 
 @Preview(showBackground = true)

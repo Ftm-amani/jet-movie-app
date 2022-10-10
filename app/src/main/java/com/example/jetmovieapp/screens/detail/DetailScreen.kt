@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
 @Composable
-fun DetailScreen(navController: NavController, movieData: String?) {
+fun DetailScreen(navController: NavController, movieId: String?) {
 	Scaffold(topBar = {
 		TopAppBar(backgroundColor = Color.Transparent,
 				  elevation = 0.dp) {
@@ -40,7 +40,7 @@ fun DetailScreen(navController: NavController, movieData: String?) {
 				verticalArrangement = Arrangement.Center
 			) {
 				
-				Text(text = movieData.toString(), style = MaterialTheme.typography.h5)
+				Text(text = movieId.toString(), style = MaterialTheme.typography.h5)
 				Spacer(modifier = Modifier.height(23.dp))
 			}
 		}
